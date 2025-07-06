@@ -1,21 +1,34 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Adarsh Madankar | Python Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Madankar | Python & Django Developer</title>
+    <!-- Load particles.js first -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Then your other CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
 
-</head>
-<body>
+<body data-theme="dark">
+    <div id="particles-js"></div>
+
+    <!-- Floating Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
                 <span class="logo-text">AM</span>
             </div>
+
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -25,6 +38,7 @@
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -33,177 +47,288 @@
             </nav>
         </div>
     </header>
+
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
+                    <h4 class="hero-subtitle">Hi, I'm</h4>
                     <h1 class="hero-title">Adarsh Madankar</h1>
-                    <h2 class="hero-subtitle">Python Developer | Django REST Framework | Full Stack Developer</h2>
-                    <p class="hero-description">Building scalable web applications with 1.4+ years of experience in software development.</p>
+                    <h2 class="hero-tagline">Python Developer | Django REST Framework | Full Stack Developer</h2>
+                    <p class="hero-description">I build scalable web applications with 1.4+ years of experience in software development. Currently crafting digital solutions at MIT Software and Services.</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Contact Me</a>
-                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>View Projects</span>
+                            <i class="fas fa-code"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="hero-image">
                     <div class="image-wrapper">
                         <div class="tech-icons">
                             <i class="fab fa-python"></i>
                             <i class="fab fa-aws"></i>
                             <i class="fab fa-js"></i>
+                            <i class="fab fa-react"></i>
                             <i class="fas fa-database"></i>
+                            <i class="fab fa-git-alt"></i>
+                            <i class="fab fa-docker"></i>
+                            <i class="fab fa-html5"></i>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+            </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a passionate software developer with expertise in Python, Django REST Framework, and full-stack development. Currently working at MIT Software and Services, I specialize in building robust web applications and RESTful APIs.</p>
-                        <p>With experience in both frontend and backend development, I've contributed to real-world systems like the Civil Construction Management System (CCMS) and Order Management System (OMS). I'm proficient in deploying Django applications on AWS (EC2) and have strong skills in database design and automation testing.</p>
-                        <div class="personal-info">
-                            <div class="info-item">
+        <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-number">01.</span>
+            About Me
+        </h2>
+
+        <div class="about-content">
+            <div class="about-text">
+                <div class="animated-text">
+                    <p class="typing-animation">I'm a passionate <span class="highlight-text">Python Developer</span> with expertise in building scalable web applications and RESTful APIs. With <span class="counter" data-target="1.4">0</span>+ years of professional experience, I specialize in:</p>
+
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <i class="fas fa-chevron-right pulse"></i>
+                            <span>Django & Django REST Framework</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-chevron-right pulse"></i>
+                            <span>Full-stack web development</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-chevron-right pulse"></i>
+                            <span>AWS deployment (EC2)</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fas fa-chevron-right pulse"></i>
+                            <span>Database design & optimization</span>
+                        </li>
+                    </ul>
+
+                    <p class="fade-in">Currently at <span class="highlight-company">MIT Software and Services</span>, I transform complex business requirements into efficient digital solutions. My approach combines technical excellence with clean architecture principles.</p>
+                </div>
+
+                <div class="personal-info glass-card">
+                    <div class="info-grid">
+                        <div class="info-item hover-effect">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
                                 <span class="info-label">Email:</span>
                                 <span class="info-value">adarshmadan4@gmail.com</span>
                             </div>
-                            <div class="info-item">
+                        </div>
+                        <div class="info-item hover-effect">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
                                 <span class="info-label">Phone:</span>
                                 <span class="info-value">+91 9096174233</span>
                             </div>
-                            <div class="info-item">
+                        </div>
+                        <div class="info-item hover-effect">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
                                 <span class="info-label">Location:</span>
                                 <span class="info-value">Nagpur, India</span>
                             </div>
-                            <div class="info-item">
+                        </div>
+                        <div class="info-item hover-effect">
+                            <div class="info-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
                                 <span class="info-label">Education:</span>
                                 <span class="info-value">B.Tech in Computer Engineering (2024)</span>
                             </div>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <div class="image-container">
-                            <div class="glow-effect"></div>
-                            <img src="images/human.jpg" alt="Adarsh Madankar">
+
+                    <div class="achievements">
+                        <div class="achievement-item rotate-in">
+                            <div class="achievement-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div>
+                                <div class="counter" data-target="15">0</div>
+                                <span>Projects Completed</span>
+                            </div>
+                        </div>
+                        <div class="achievement-item rotate-in">
+                            <div class="achievement-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <div class="counter" data-target="8">0</div>
+                                <span>Systems Deployed</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="about-image">
+                <div class="image-container floating">
+                    <div class="glow-effect"></div>
+                    <div class="tech-orbits">
+                        <div class="orbit orbit-1">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <i class="fab fa-django"></i>
+                        </div>
+                        <div class="orbit orbit-3">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/300" alt="Adarsh Madankar" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title">
+                    <span class="title-number">02.</span>
+                    Technical Skills
+                </h2>
+
                 <div class="skills-grid">
                     <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
                         <h3 class="skill-category-title">Languages</h3>
                         <div class="skill-items">
                             <div class="skill-item">
                                 <span class="skill-name">Python</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 90%"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                    <span class="skill-percent">80%</span>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Java</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%"></div>
+                                    <span class="skill-percent">70%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
                         <h3 class="skill-category-title">Frameworks</h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Django REST Framework</span>
+                                <span class="skill-name">Django REST</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Frontend</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">HTML/CSS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-name">React</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 75%"></div>
+                                    <span class="skill-percent">75%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
                         <h3 class="skill-category-title">Databases</h3>
                         <div class="skill-items">
                             <div class="skill-item">
                                 <span class="skill-name">MySQL</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 80%"></div>
+                                    <span class="skill-percent">80%</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">SQL</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">SQLite</span>
+                                <span class="skill-name">PostgreSQL</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 75%"></div>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                    <span class="skill-percent">70%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3 class="skill-category-title">Tools</h3>
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="skill-category-title">Tools & DevOps</h3>
                         <div class="skill-items">
                             <div class="skill-item">
                                 <span class="skill-name">Git/GitHub</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 85%"></div>
+                                    <span class="skill-percent">85%</span>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">AWS (EC2)</span>
                                 <div class="skill-bar">
                                     <div class="skill-level" style="width: 70%"></div>
+                                    <span class="skill-percent">70%</span>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Selenium</span>
+                                <span class="skill-name">Docker</span>
                                 <div class="skill-bar">
-                                    <div class="skill-level" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Postman</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%"></div>
+                                    <div class="skill-level" style="width: 65%"></div>
+                                    <span class="skill-percent">65%</span>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +340,11 @@
         <!-- Experience Section -->
         <section id="experience" class="experience">
             <div class="container">
-                <h2 class="section-title">Work Experience</h2>
+                <h2 class="section-title">
+                    <span class="title-number">03.</span>
+                    Work Experience
+                </h2>
+
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">Aug 2024 - Present</div>
@@ -257,11 +386,20 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title">
+                    <span class="title-number">04.</span>
+                    Projects
+                </h2>
+
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/civil.jpg" alt="Civil Construction Management System">
+                            <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Civil Construction Management System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Civil Construction Management System</h3>
@@ -273,14 +411,22 @@
                                 <span class="tech-tag">AWS EC2</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-small">View Details</a>
+                                <a href="#" class="btn btn-small">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/tax.jpg" alt="Grampanchayat Property Tax System">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Grampanchayat Property Tax System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Grampanchayat Property Tax System</h3>
@@ -292,14 +438,22 @@
                                 <span class="tech-tag">Localization</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-small">View Details</a>
+                                <a href="#" class="btn btn-small">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/e-comms.jpg" alt="Order Management System">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Order Management System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Order Management System</h3>
@@ -311,14 +465,22 @@
                                 <span class="tech-tag">Selenium</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-small">View Details</a>
+                                <a href="#" class="btn btn-small">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/hardware.jpg" alt="Sleepiness Warning System">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sleepiness Warning System">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Sleepiness Warning Identification System</h3>
@@ -330,7 +492,10 @@
                                 <span class="tech-tag">Machine Learning</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-small">View Details</a>
+                                <a href="#" class="btn btn-small">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -341,7 +506,11 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 class="section-title">
+                    <span class="title-number">05.</span>
+                    Get In Touch
+                </h2>
+
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="info-card">
@@ -371,41 +540,62 @@
                                 <p>Nagpur, Maharashtra, India</p>
                             </div>
                         </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
+
                     <div class="contact-form">
                         <form id="contactForm">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <label for="name">Name</label>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <label for="email">Email</label>
                             </div>
                             <div class="form-group">
                                 <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
                             </div>
                             <div class="form-group">
                                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                <label for="message">Message</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" class="btn btn-primary">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-<footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">AM</div>
-                    <p class="footer-text">Python Developer with expertise in Django REST Framework, full-stack development, and AWS deployment.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <h3 class="footer-title">Adarsh Madankar</h3>
+                    <p class="footer-text">Python Developer specializing in Django REST Framework and full-stack web development.</p>
                 </div>
+
                 <div class="footer-links">
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-list">
@@ -417,22 +607,32 @@
                         <li><a href="#contact" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-contact">
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="footer-list">
-                        <li><i class="fas fa-envelope"></i> adarshmadan4@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +91 9096174233</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Nagpur, Maharashtra, India</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:adarshmadan4@gmail.com" class="footer-link">adarshmadan4@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919096174233" class="footer-link">+91 9096174233</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="footer-link">Nagpur, India</span>
+                        </li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 Adarsh Madankar. All Rights Reserved.</p>
+                <p class="copyright">© <span id="year"></span> Adarsh Madankar. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
-<script src="script.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
