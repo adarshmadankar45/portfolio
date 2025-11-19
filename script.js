@@ -360,3 +360,137 @@ document.querySelectorAll('.counter').forEach(counter => {
 // Debugging helper
 console.log("Script loaded successfully");
 console.log("Particles loaded:", typeof particlesJS === 'function' ? 'Yes' : 'No');
+
+// Enhanced Form submission with professional modal
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Show professional modal instead of sending email
+        showEmailModal(name, email, subject, message);
+
+        // Optional: Log the form data for debugging
+        console.log('Form data collected:', { name, email, subject, message });
+
+        // Reset form
+        contactForm.reset();
+    });
+}
+
+// Professional Email Modal Function
+function showEmailModal(name, email, subject, message) {
+    // Create modal overlay
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'email-modal-overlay';
+    modalOverlay.innerHTML = `
+        <div class="email-modal">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h3>Message Ready to Send</h3>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="success-animation">
+                    <div class="checkmark">
+                        <div class="check-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="modal-message">Your message has been prepared! To ensure delivery, please send it directly via email.</p>
+
+                <div class="message-preview">
+                    <div class="preview-item">
+                        <span class="preview-label">From:</span>
+                        <span class="preview-value">${name} (${email})</span>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-label">Subject:</span>
+                        <span class="preview-value">${subject}</span>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-label">Message:</span>
+                        <span class="preview-value">${message.substring(0, 100)}${message.length > 100 ? '...' : ''}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="copyEmailBtn">
+                    <i class="fas fa-copy"></i>
+                    Copy Email Address
+                </button>
+                <a href="mailto:adarshmadan18@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello Adarsh,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`)}"
+                   class="btn btn-primary" id="openEmailBtn">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open Email Client
+                </a>
+            </div>
+        </div>
+    `;
+
+    // Add to document
+    document.body.appendChild(modalOverlay);
+
+    // Show modal with animation
+    setTimeout(() => {
+        modalOverlay.classList.add('show');
+    }, 100);
+
+    // Close modal functionality
+    const closeBtn = modalOverlay.querySelector('.modal-close');
+    closeBtn.addEventListener('click', () => {
+        closeModal(modalOverlay);
+    });
+
+    // Close when clicking overlay
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal(modalOverlay);
+        }
+    });
+
+    // Copy email functionality
+    const copyEmailBtn = modalOverlay.querySelector('#copyEmailBtn');
+    copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('adarshmadan18@gmail.com').then(() => {
+            // Show copy confirmation
+            const originalText = copyEmailBtn.innerHTML;
+            copyEmailBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            copyEmailBtn.style.background = 'var(--secondary-color)';
+
+            setTimeout(() => {
+                copyEmailBtn.innerHTML = originalText;
+                copyEmailBtn.style.background = '';
+            }, 2000);
+        });
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function escClose(e) {
+        if (e.key === 'Escape') {
+            closeModal(modalOverlay);
+            document.removeEventListener('keydown', escClose);
+        }
+    });
+}
+
+function closeModal(modal) {
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.remove();
+    }, 300);
+}
